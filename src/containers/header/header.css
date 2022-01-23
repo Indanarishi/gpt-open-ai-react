@@ -74,6 +74,12 @@
 
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    transition: .3s all linear;
+}
+
+.gpt3__header-content__input button:hover {
+    transform: scale(0.98);
+    opacity: .9;
 }
 
 .gpt3__header-content__people {

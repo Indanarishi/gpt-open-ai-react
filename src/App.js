@@ -1,6 +1,6 @@
 
 // styles
-import './App.css';
+import './App.css'
 
 // components
 import { Footer, Blog, Possibility, Features, WhatGPT3, Header } from './containers';

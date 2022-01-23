@@ -1,9 +1,13 @@
 import React from 'react';
-import { Feature } from '../../components';
+import { motion } from 'framer-motion';
 
 // styles
 import './features.css';
 
+// components
+import { Feature } from '../../components';
+
+// data
 const featuresData = [
     {
         title: 'Improving end distrusts instantly',
@@ -23,20 +27,67 @@ const featuresData = [
     },
 ];
 
+// motion
+const animationLeft = {
+    hidden: { 
+        opacity: 0,
+        x: -50,
+        y: -50
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        x: 0,
+        transition: {
+            duration: 1
+        }
+    }
+}
+
+const animationRight = {
+    hidden: { 
+        opacity: 0,
+        x: 50,
+        y: -50
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        x: 0,
+        transition: {
+            duration: 1
+        }
+    }
+}
+
 const Features = () => {
     return (
         <div className="gpt3__features section__padding" id="features">
-            <div className="gpt3__features-heading">
+            <motion.div 
+                className="gpt3__features-heading"
+                initial="hidden"
+                variants={animationLeft}
+                whileInView="visible"
+            >
                 <h1 className="gradient__text">
                     The Future is Now and You Just Need To Realize It. Step into Future Today &amp; Make it Happen.
                 </h1>
                 <p>Request Early Access to Get Started</p>
-            </div>
-            <div className="gpt3__features-container">
+            </motion.div>
+            <motion.div 
+                className="gpt3__features-container"
+                initial="hidden"
+                variants={animationRight}
+                whileInView="visible"
+            >
                 {featuresData.map((feature, index) => (
-                    <Feature key={index} title={feature.title} text={feature.text} />
+                    <Feature 
+                        key={index} 
+                        title={feature.title} 
+                        text={feature.text} 
+                    />
                 ))}
-            </div>
+            </motion.div>
         </div>
     )
 };

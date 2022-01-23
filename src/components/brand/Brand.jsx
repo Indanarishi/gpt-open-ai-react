@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // assets
 import { google, slack, dropbox, atlassian, shopify } from './import';
@@ -6,9 +7,29 @@ import { google, slack, dropbox, atlassian, shopify } from './import';
 // styles
 import './brand.css';
 
+// motion
+const animation = {
+    hidden: { 
+        opacity: 0,
+        y: 30 
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1
+        }
+    }
+}
+
 const Brand = () => {
     return (
-        <div className="gpt3__brand section__padding">
+        <motion.div 
+            className="gpt3__brand section__padding"
+            initial="hidden"
+            variants={animation}
+            whileInView="visible"
+        >
             <div>
                 <img src={google} alt="google" />
             </div>
@@ -24,7 +45,7 @@ const Brand = () => {
             <div>
                 <img src={shopify} alt="shopify" />
             </div>
-        </div>
+        </motion.div>
     );
 };
 

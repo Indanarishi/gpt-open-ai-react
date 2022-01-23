@@ -45,10 +45,20 @@
     color: #fff;
     margin-bottom: 5rem;
     cursor: pointer;
+    transition: .3s all linear;
+}
+
+.gpt3__blog-container_article-content h3:hover {
+    color: #81AFDD;
 }
 
 .gpt3__blog-container_article-content p:last-child {
     cursor: pointer;
+    transition: .3s all linear;
+}
+
+.gpt3__blog-container_article-content p:last-child:hover {
+    color: #81AFDD;
 }
 
 

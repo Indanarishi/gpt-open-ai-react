@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 // styles
 import './navbar.css';
@@ -23,7 +24,12 @@ const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
 
     return (
-        <div className="gpt3__navbar">
+        <motion.div 
+            className="gpt3__navbar"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5 }}
+        >
             <div className="gpt3__navbar-links">
                 <div className="gpt3__navbar-links_logo">
                     <img src={logo} alt="logo" />
@@ -53,7 +59,7 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-        </div>
+        </motion.div>
     )
 };
 
