@@ -61,6 +61,13 @@
     line-height: 30px;
     color: var(--color-subtext);
     cursor: pointer;
+    transition: .2s all ease-in;
+    opacity: 0.8;
+}
+
+.gpt3__whatgpt3-heading p:hover {
+    transform: scale(.98);
+    opacity: 1;
 }
 
 .gpt3__whatgpt3-container {

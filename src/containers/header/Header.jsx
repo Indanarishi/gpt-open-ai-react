@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 // assets
 import people from '../../assets/people.png';
@@ -38,6 +38,19 @@ const animationRight = {
 }
 
 const Header = () => {
+
+    const controls = useAnimation()
+    controls.start({
+        y: 30,
+        transition: {
+            delay: 2,
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: 4,
+            ease: "linear"
+        }
+    })
+
     return (
         <div className='gpt3__header section__padding' id='home'>
             <motion.div 
@@ -66,6 +79,7 @@ const Header = () => {
                 initial="hidden"
                 variants={animationRight}
                 whileInView="visible"
+                animate={controls}
             >
                 <img src={ai} alt="ai" />
             </motion.div>
