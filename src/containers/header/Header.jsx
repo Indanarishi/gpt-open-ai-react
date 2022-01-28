@@ -46,7 +46,7 @@ const Header = () => {
             delay: 2,
             repeat: Infinity,
             repeatType: "reverse",
-            duration: 4,
+            duration: 3,
             ease: "linear"
         }
     })

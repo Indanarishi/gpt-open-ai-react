@@ -51,14 +51,14 @@
 .gpt3__navbar-links_container p:hover,
 .gpt3__navbar-sign p:hover,
 .gpt3__navbar-menu_container p:hover {
-    color: #81AFDD;
+    color: #c2e0ff;
 }
 
 .gpt3__navbar-sign button,
 .gpt3__navbar-menu_container button {
     padding: 0.5rem 1rem;
     color: #fff;
-    background: #FF4820;
+    background: #FF5151;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
